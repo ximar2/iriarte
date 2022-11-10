@@ -1,14 +1,11 @@
 const ximar= async()=>{
 
-    try{ 
-        const res= await fetch( ' https://pokeapi.co/api/v2/pokemon/')
+    try{
+       
+        const res= await fetch('https://rickandmortyapi.com/api/character/')
         const data= await res.json()
-        console.log(data.results),data.results.forEach(element => {console.log(element.name)
-            });
-            const map=data.results.map(poke=>poke.name)
-            console.log(map)
-            const filtro=data.results.filter(poke=>poke.name !=='bulbasaur')
-            console.log(filtro)
+        console.log(data.results),data.results.forEach(element => {element.name});
+        
 
     }
 
